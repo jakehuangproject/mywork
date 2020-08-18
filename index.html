@@ -44,13 +44,84 @@
             <div class="logo">Jake's&nbsp;</div>
             <div class="logo_bold">Zone</div>
           </div>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
           <div class="top_right">
             <nav>
-              <ul>
+              <ul class="nav-links">
                 <li><a href="index.html" class="hover">Home</a></li>
                 <li><a href="#">Desgin</a></li>
-                <li><a href="#">Photography</a></li>
-                <li><a href="aboutMe.html">About</a></li>
+                <li><a href="#">aboutMe</a></li>
+                <li>
+                  <a href="aboutMe.html">Mega Menu</a>
+                  <div class="menu-sub" id="spcialh3">
+                    <div class="menu-col-1">
+                      <h3 class="menu-category">Category</h3>
+                      <ul>
+                        <li><a href="">Link 01</a></li>
+                        <li><a href="">Link 02</a></li>
+                        <li><a href="">Link 03</a></li>
+                        <li><a href="">Link 04</a></li>
+                        <li><a href="">Link 05</a></li>
+                      </ul>
+
+                      <h3 class="menu-category">Category</h3>
+                      <ul>
+                        <li><a href="">Link 01</a></li>
+                        <li><a href="">Link 02</a></li>
+                      </ul>
+
+                      <h3 class="menu-category">Category</h3>
+                      <ul>
+                        <li><a href="">Link 01</a></li>
+                        <li><a href="">Link 02</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="menu-col-1">
+                      <h3 class="menu-category">Category</h3>
+                      <ul>
+                        <li><a href="">Link 01</a></li>
+                        <li><a href="">Link 02</a></li>
+                        <li><a href="">Link 03</a></li>
+                        <li><a href="">Link 04</a></li>
+                        <li><a href="">Link 05</a></li>
+                      </ul>
+
+                      <h3 class="menu-category">Category</h3>
+                      <ul>
+                        <li><a href="">Link 01</a></li>
+                        <li><a href="">Link 02</a></li>
+                        <li><a href="">Link 03</a></li>
+                        <li><a href="">Link 04</a></li>
+                        <li><a href="">Link 05</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="menu-col-1">
+                      <h3 class="menu-category">Category</h3>
+                      <ul>
+                        <li><a href="">Link 01</a></li>
+                        <li><a href="">Link 02</a></li>
+                        <li><a href="">Link 03</a></li>
+                        <li><a href="">Link 04</a></li>
+                        <li><a href="">Link 05</a></li>
+                      </ul>
+
+                      <h3 class="menu-category">Category</h3>
+                      <ul>
+                        <li><a href="">Link 01</a></li>
+                        <li><a href="">Link 02</a></li>
+                        <li><a href="">Link 03</a></li>
+                        <li><a href="">Link 04</a></li>
+                        <li><a href="">Link 05</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </nav>
           </div>
@@ -58,7 +129,7 @@
       </div>
 
       <header class="top-heaer">
-        <h1 class="headerh1">Jake's Zone ff</h1>
+        <h1 class="headerh1">Jake's Zone</h1>
       </header>
 
       <main class="main clearfix">
@@ -92,7 +163,7 @@
 
             <div class="featured s3">
               <div id="pic3" class="featured-img"></div>
-              <h2>Pulse Necklace ff</h2>
+              <h2>Pulse Necklace</h2>
               <p class="centerPar">
                 Product Type: Wearable Design & Interactive Design
                 <span class="align_right"
@@ -204,11 +275,11 @@
         origin: "bottom",
       });
 
-      sr.reveal(".s1 , .s3, .s5, .s7, .s9, .top_left", {
+      sr.reveal(".s3, .s5, .s7, .s9, .top_left", {
         origin: "left",
       });
 
-      sr.reveal(".s2 , .s4, .s6, .s8, .s10, .top_right", {
+      sr.reveal(".s4, .s6, .s8, .s10, .top_right", {
         origin: "right",
       });
     </script>
@@ -218,5 +289,6 @@
         return false;
       });
     </script>
+    <script src="./app.js"></script>
   </body>
 </html>
