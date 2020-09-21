@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Movie-List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="inputContainer">
+      <input type="text" placeholder="Add new to your list" />
+      <button class="addMovieList">+</button>
+    </nav>
+    <br />
+    <nav class="inputContainer2">
+      <input type="text" placeholder="Edit your list here" />
+      <button class="addMovieList2">Update</button>
+    </nav>
+    <br />
+
+    <div class="MovieLists">
+      <!-- <div class="MovieList">
+      <h4>Make money</h4>
+      <button class="removeMovieList">Remove</button>
+      <button class="editMovieList">Edit</button>
+    </div> -->
+    </div>
+    <script>
+      var MovieListsParent = document.querySelector(".MovieLists");
+      var MovieListInput = document.querySelector(".inputContainer input");
+      var MovieListInput2 = document.querySelector(".inputContainer2 input");
+      var addMovieList = document.querySelector(".addMovieList");
+      var updateBtn = document.querySelector(".addMovieList2");
+      var inputContainer = document.querySelector(".inputContainer");
+      var inputContainer2 = document.querySelector(".inputContainer2");
+      let count = 0;
+      let className;
+
+      addMovieList.addEventListener("click", MovieListFunction);
+
+      function MovieListFunction() {
+        var MovieList = document.createElement("div");
+        MovieList.setAttribute("class", "MovieList");
+        MovieListsParent.appendChild(MovieList);
+
+        count += 1;
+
+        var MovieListTittle = document.createElement("h4");
+        MovieList.setAttribute("class", count);
+        MovieListTittle.setAttribute("class", "children");
+        MovieListTittle.innerHTML = MovieListInput.value;
+        MovieList.appendChild(MovieListTittle);
+
+        //remove button
+        var removeMovieList = document.createElement("button");
+        removeMovieList.setAttribute("class", "removeMovieList");
+        removeMovieList.innerHTML = "Remove";
+        MovieList.appendChild(removeMovieList);
+
+        //edit button
+        var editMovieList = document.createElement("button");
+        editMovieList.setAttribute("class", "editMovieList");
+        editMovieList.innerHTML = "Edit";
+        MovieList.appendChild(editMovieList);
+
+        MovieListInput.value = "";
+
+        editMovieList.addEventListener("click", function (e) {
+          className = e.target.parentNode.className;
+          console.log("class, ", className);
+          let targetText = e.target.parentNode.childNodes[0].innerHTML;
+          console.log("targetText", targetText);
+
+          MovieListInput2.value = targetText;
+        });
+      }
+
+      //update button
+      updateBtn.addEventListener("click", function () {
+        console.log("editing!!! ", className);
+        let updateTitle = MovieListInput2.value;
+        let doc = document.getElementsByClassName(className)[0];
+        console.log(
+          "update",
+          doc.getElementsByClassName("children")[0].innerHTML
+        );
+        console.log("==================================");
+        doc.getElementsByClassName("children")[0].innerHTML = updateTitle;
+
+        MovieListInput2.value = "";
+      });
+    </script>
+  </body>
+</html>
